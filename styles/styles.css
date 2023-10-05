@@ -22,7 +22,7 @@ body {
   color: #000000;
 }
 
-button {
+.button {
   background-color: #756157;
 }
 
@@ -51,11 +51,11 @@ button {
   color: #FFFFFF;
 }
 
-.hero {
-  background-image: url("../images/hero.jpg"), url("../images/vector-to-hero.png");
-  background-size: cover, contain;
+.hero{
+  background-image: url("../images/vector-to-hero.png"), url("../images/hero.jpg");
+  background-size: contain, 100% auto;
   background-repeat: no-repeat;
-  background-position: center, bottom;
+  background-position: bottom, center;
   background-color: #000000;
   color: #FFFFFF;
 }
