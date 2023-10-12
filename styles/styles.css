@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -23,8 +31,10 @@ body {
 }
 
 .page-container {
+  width: 1200px;
+  margin: 0 auto;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
 .button {
@@ -37,6 +47,28 @@ body {
   color: #FFFFFF;
   background-color: #756157;
   text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 140px;
+  margin-right: 28px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+
+.navigation-user {
+  max-width: 300px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -55,6 +87,10 @@ body {
   text-align: center;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .hero {
   background-image: url("../images/vector-to-hero.svg"), url("../images/hero.jpg");
   background-size: contain, 100% auto;
@@ -62,6 +98,11 @@ body {
   background-position: bottom, center;
   background-color: #adcee3;
   color: #FFFFFF;
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
 }
 
 .title {
@@ -77,6 +118,11 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333333;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item {
@@ -114,6 +160,17 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333333;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.features-item {
+  width: 400px;
 }
 
 .features-caption {
@@ -170,12 +227,31 @@ body {
   background-color: #82B3D3;
 }
 
+.page-footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  width: 200px;
+}
+
+.footer-contacts {
+  width: 720px;
+}
+
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-logo {
+  width: 115px;
 }
 
 .catalog {
