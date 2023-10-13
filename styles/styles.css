@@ -19,10 +19,10 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -32,6 +32,7 @@ body {
 
 .page-container {
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
@@ -51,7 +52,7 @@ body {
 
 .navigation {
   display: flex;
-  width: 1200px;
+  width: 1060px;
   margin: 0 auto;
 }
 
@@ -164,7 +165,6 @@ body {
 
 .features-list {
   display: flex;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -262,6 +262,11 @@ body {
   color: #FFFFFF;
 }
 
+.inner-header {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
@@ -273,6 +278,15 @@ body {
   line-height: 21px;
 }
 
+.catalog-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
 .catalog-title {
   font-size: 20px;
   font-weight: 700;
@@ -280,13 +294,29 @@ body {
   text-transform: capitalize;
 }
 
+.catalog-filter-group {
+  width: 151px;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-filter-item {
   font-size: 18px;
   line-height: 23px;
 }
 
+.catalog-price {
+  width: 288px;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-input {
   font-family: inherit;
+}
+
+.choose {
+  width: 191px;
 }
 
 .button-submit {
@@ -308,7 +338,14 @@ body {
   font-family: inherit;
 }
 
+.hotels-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hotels-card {
+  margin: 0;
+  padding: 0;
   color: #333333;
 }
 
