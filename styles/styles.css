@@ -52,7 +52,6 @@ body {
 
 .navigation {
   display: flex;
-  width: 1060px;
   margin: 0 auto;
 }
 
@@ -230,7 +229,6 @@ body {
 .page-footer-container {
   display: flex;
   justify-content: space-between;
-  width: 1060px;
   margin: 0 auto;
 }
 
@@ -263,7 +261,6 @@ body {
 }
 
 .inner-header {
-  width: 1060px;
   margin: 0 auto;
 }
 
@@ -279,7 +276,6 @@ body {
 }
 
 .catalog-container {
-  width: 1060px;
   margin: 0 auto;
 }
 
@@ -338,9 +334,11 @@ body {
   font-family: inherit;
 }
 
-.hotels-container {
+.hotels-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .hotels-card {
@@ -371,6 +369,12 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-item {
