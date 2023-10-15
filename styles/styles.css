@@ -158,6 +158,8 @@ body {
 .advantages-title {
   margin-top: 0;
   margin-bottom: 25px;
+  margin-left: 290px;
+  margin-right: 290px;
 }
 
 .advantages-desc {
@@ -167,6 +169,8 @@ body {
   color: #333333;
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 274px;
+  margin-right: 274px;
 }
 
 .advantages-list {
@@ -219,11 +223,15 @@ body {
 .title-features {
   margin-top: 0;
   margin-bottom: 20px;
+  margin-left: 347px;
+  margin-right: 347px;
 }
 
 .features-desc {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 355px;
+  margin-right: 355px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -271,11 +279,15 @@ body {
 .title-search {
   margin-top: 0;
   margin-bottom: 20px;
+  margin-left: 304px;
+  margin-right: 304px;
 }
 
 .search-text {
   margin-top: 0;
   margin-bottom: 54px;
+  margin-left: 304px;
+  margin-right: 304px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -283,8 +295,11 @@ body {
 }
 
 .button-search {
+  display: block;
   font-size: 20px;
   line-height: 36px;
+  margin-left: 412px;
+  margin-right: 412px;
 }
 
 .subscribe {
@@ -295,6 +310,8 @@ body {
 .title-subscribe {
   margin-top: 0;
   margin-bottom: 20px;
+  margin-left: 398px;
+  margin-right: 398px;
 }
 
 .field {
@@ -313,6 +330,8 @@ body {
 .subscribe-text {
   margin-top: 0;
   margin-bottom: 54px;
+  margin-left: 362px;
+  margin-right: 362px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -322,6 +341,10 @@ body {
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
+}
+
+.subscribe-desc {
+  display: block;
 }
 
 .page-footer-container {
