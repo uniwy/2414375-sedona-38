@@ -390,7 +390,6 @@ body {
 
 .footer-contacts {
   width: 720px;
-  padding: 5px 194px;
 }
 
 .footer-contacts-phone {
@@ -399,6 +398,7 @@ body {
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -628,11 +628,25 @@ body {
   box-sizing: border-box;
   min-width: 60px;
   height: 60px;
-  padding: 12px 24px;
+  padding: 12px 12px;
   font-weight: 700;
   line-height: 36px;
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
+  text-align: center;
   text-decoration: none;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-next {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  background-color: transparent;
 }
