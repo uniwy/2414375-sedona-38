@@ -588,7 +588,9 @@ body {
   grid-row: 2/3;
 }
 
-.hotels-card-image {}
+.hotels-card-image {
+  object-fit: contain;
+}
 
 .hotels-card-link-title {
   grid-column: 2/-2;
