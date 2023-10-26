@@ -186,9 +186,6 @@ body {
 }
 
 .advantages-item-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   box-sizing: border-box;
   width: 400px;
   padding: 102px 85px;
@@ -237,6 +234,8 @@ body {
 .advantages-img {
   display: block;
   width: 800px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .features-heading {
