@@ -281,7 +281,7 @@ body {
   background-color: rgba(0, 0, 0, 0.30);
 }
 
-advantages-caption-line::after {
+.advantages-caption-line::after {
   background-color: rgba(255, 255, 255, 0.30);
 }
 
@@ -504,16 +504,20 @@ advantages-caption-line::after {
   height: 40px;
 }
 
-.footer-social-link:hover .footer-social-icon {
-  fill: #68A2CA;
+.footer-social-link {
+  color: #83B3D3;
 }
 
-.footer-social-link:focus .footer-social-icon {
-  fill: #68A2CA;
+.footer-social-link:hover {
+  color: #68A2CA;
 }
 
-.footer-social-link:active .footer-social-icon {
-  fill: rgba(104, 162, 202, 0.3);
+.footer-social-link:focus {
+  color: #68A2CA;
+}
+
+.footer-social-link:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-contacts {
@@ -534,7 +538,6 @@ advantages-caption-line::after {
   color: #756157;
 }
 
-
 .footer-contacts-phone:focus {
   color: #756157;
 }
@@ -546,10 +549,11 @@ advantages-caption-line::after {
 .footer-logo {
   display: block;
   width: 115px;
+  color: #000000;
 }
 
 .footer-logo:hover {
-  fill: #756157;
+  color: #756157;
 }
 
 .footer-logo:focus {
@@ -587,6 +591,7 @@ advantages-caption-line::after {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
@@ -594,14 +599,20 @@ advantages-caption-line::after {
 }
 
 .breadcrumbs-item {
-  min-width: 8px;
-  margin-right: 10px;
+  margin-right: 28px;
   font-size: 16px;
   line-height: 21px;
 }
 
+.breadcrumbs-link {
+  position: relative;
+  display: block;
+  margin: auto 0;
+}
+
 .breadcrumbs-link-home {
-  padding-right: 12px;
+  width: 12px;
+  height: 12px;
   background-image: url("../images/breadcrumbs-home.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -611,10 +622,16 @@ advantages-caption-line::after {
   margin-right: 18px;
 }
 
-.breadcrumbs-arrow {
+.breadcrumbs-link::before {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  width: 6px;
+  height: 10px;
   background-image: url("../images/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
+  content: "";
 }
 
 .catalog-container {
@@ -632,12 +649,14 @@ advantages-caption-line::after {
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+
 }
 
 .catalog-filter-group {
   width: 151px;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 .catalog-filter-list {
@@ -668,6 +687,7 @@ advantages-caption-line::after {
   width: 288px;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 .catalog-input {
@@ -715,7 +735,6 @@ advantages-caption-line::after {
 }
 
 .button-reset:focus {
-  border: 3px solid #83B3D3;
   background-color: transparent;
 }
 
@@ -768,16 +787,19 @@ advantages-caption-line::after {
 .sorting-btn-item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  height: 48px;
-  border-radius: 4px;
-  border: 2px solid #E5E5E5;
+
 }
 
 .button-dark {
   border-radius: 4px;
   border: 2px solid #000000;
+}
+
+.card-toggle {
+  min-width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 2px solid #E5E5E5;
 }
 
 .hotels-container {
@@ -877,13 +899,27 @@ advantages-caption-line::after {
 }
 
 .stars {
-  margin: 0;
+  display: block;
+  height: 17px;
+  margin: auto 0;
+  background-image: url("../images/star.svg");
+  background-repeat: space repeat;
 }
 
 .stars-2 {
-  background-image: url("../images/star.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
+  width: 42px;
+}
+
+.stars-3 {
+  width: 66px;
+}
+
+.stars-4 {
+  width: 89px;
+}
+
+.stars-5 {
+  width: 113px;
 }
 
 .hotels-card-rating {
@@ -925,6 +961,7 @@ advantages-caption-line::after {
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
+  border: 1px solid #82B3D3;
   text-align: center;
   text-decoration: none;
 }
@@ -935,18 +972,20 @@ advantages-caption-line::after {
 }
 
 .pagination-link-color:focus {
-  border: 1px solid#82B3D3;
+  border: 1px solid #82B3D3;
   background-color: #68A2CA;
 }
 
 .pagination-link-color:active {
   color: rgba(255, 255, 255, 0.30);
+  border: 1px solid #82B3D3;
   background-color: #82B3D3;
 }
 
 .pagination-current {
   color: #000000;
   background-color: #F2F2F2;
+  border: 1px solid #F2F2F2;
 }
 
 .pagination-next {
@@ -955,4 +994,5 @@ advantages-caption-line::after {
   font-weight: 400;
   color: #000000;
   background-color: transparent;
+  border: 1px solid transparent;
 }
