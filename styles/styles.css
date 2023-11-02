@@ -496,15 +496,12 @@ body {
   list-style-type: none;
 }
 
-.footer-social-item {
+.footer-social-link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 48px;
   height: 40px;
-}
-
-.footer-social-link {
   color: #83B3D3;
 }
 
@@ -591,7 +588,6 @@ body {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
@@ -606,11 +602,13 @@ body {
 
 .breadcrumbs-link {
   position: relative;
-  display: block;
   margin: auto 0;
 }
 
 .breadcrumbs-link-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 12px;
   height: 12px;
   background-image: url("../images/breadcrumbs-home.svg");
@@ -784,22 +782,31 @@ body {
   margin-left: 70px;
 }
 
-.sorting-btn-item {
-  display: flex;
-  align-items: center;
-
-}
-
-.button-dark {
-  border-radius: 4px;
-  border: 2px solid #000000;
-}
-
 .card-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 48px;
   height: 48px;
   border-radius: 4px;
   border: 2px solid #E5E5E5;
+}
+
+.card-toggle:hover {
+  border: 2px solid #000000;
+}
+
+.card-toggle:focus {
+  border: 2px solid #68A2CA;
+}
+
+.card-toggle:active {
+  border: 2px solid #000000;
+}
+
+.card-toggle-dark {
+  border-radius: 4px;
+  border-color: #000000;
 }
 
 .hotels-container {
