@@ -200,34 +200,34 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
-              <label class="seach-options" for="date-from">Дата заезда:</label>
+            <div class="field-group">
+              <label class="search-options" for="date-from">Дата заезда:</label>
               <input class="field field-date-from" type="text" id="date-from" name="date-from"
                 placeholder="Укажите дату" value="27 апреля 2020">
-              <span>Мы не можем отправить вас в прошлое.</span>
-            </p>
-            <p class="field-group">
-              <label class="seach-options" for="date-to">Дата заезда:</label>
+              <span class="notes notes-red">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="field-group">
+              <label class="search-options" for="date-to">Дата заезда:</label>
               <input class="field field-date-to" type="text" id="date-to" name="date-to" placeholder="Укажите дату"
                 value="21 сентября 2023">
-              <span>На эти даты есть свободные номера. Пока есть.</span>
-            </p>
+              <span class="notes">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
             <div class="modal-field-group">
-              <p class="field-group field-group-adult">
-                <label class="seach-options" for="adult-quantity">Взрослые:</label>
-                <button class="quantity-button minus" type="button"></button>
+              <div class="field-group field-group-adult">
+                <label class="search-options" for="adult-quantity">Взрослые:</label>
+                <button class="quantity-button minus button" type="button"></button>
                 <input class="field field-people" type="number" id="adult-quantity" name="adult-quantity" value="2">
-                <button class="quantity-button pluse" type="button"></button>
-              </p>
-              <p class="field-group field-group-children">
-                <label class="seach-options" for="children-quantity">Дети:</label>
-                <button class="quantity-button minus" type="button"></button>
+                <button class="quantity-button pluse button" type="button"></button>
+              </div>
+              <div class="field-group field-group-children">
+                <label class="search-options" for="children-quantity">Дети:</label>
+                <button class="quantity-button minus button" type="button"></button>
                 <input class="field field-people" type="number" id="children-quantity" name="children-quantity"
                   value="2">
-                <button class="quantity-button pluse" type="button"></button>
-              </p>
+                <button class="quantity-button pluse button" type="button"></button>
+              </div>
             </div>
-            <button class="modal-button" type="submit">Найти</button>
+            <button class="modal-button button" type="submit">Найти</button>
           </form>
         </section>
       </div>
