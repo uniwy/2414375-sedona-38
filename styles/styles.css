@@ -639,6 +639,16 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 0.3;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -675,11 +685,11 @@ body {
   font-weight: 700;
   line-height: 24px;
   border-radius: 4px;
+  color: #000000;
   background-color: #F2F2F2;
-  background-image: url(../images/calendar.svg);
+  background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
-  opacity: 0.3;
 }
 
 .notes {
