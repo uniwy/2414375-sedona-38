@@ -162,16 +162,13 @@ body {
   background-position: center;
 }
 
-.navigation-link-search:hover {
-  color: #756157;
-}
-
-.navigation-link-search:focus {
-  color: #756157;
-}
-
-.navigation-link-search:active {
-  color: rgba(117, 97, 87, 0.3);
+.navigation-link-search:hover,
+.navigation-link-search:focus,
+.navigation-link-search:active,
+.navigation-link-favourite:hover,
+.navigation-link-favourite:focus,
+.navigation-link-favourite:active {
+  opacity: 0.6;
 }
 
 .navigation-link-favourite {
@@ -505,10 +502,6 @@ body {
   background-color: #82B3D3;
 }
 
-.subscribe-desc {
-  display: block;
-}
-
 .page-footer-container {
   display: flex;
   justify-content: space-between;
@@ -661,13 +654,14 @@ body {
 
 .field-group {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 119px 1fr;
   row-gap: 4px;
   column-gap: 18px;
   margin-bottom: 23px;
 }
 
 .search-options {
+  display: flex;
   grid-column: 1/2;
   align-self: center;
   font-size: 20px;
@@ -676,11 +670,13 @@ body {
   text-transform: capitalize;
 }
 
-.field {
+.field-input {
   position: relative;
-  grid-column: 2/5;
+  grid-column: 2/3;
   width: 440px;
   margin: 0;
+  padding: 12px 20px;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -690,10 +686,12 @@ body {
   background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
+  border: none;
+  box-sizing: border-box;
 }
 
 .notes {
-  grid-column: 2/5;
+  grid-column: 2/3;
   padding-left: 20px;
   color: #333333;
   font-size: 16px;
@@ -704,8 +702,25 @@ body {
   color: #FF5757;
 }
 
+.modal-field-group {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
 .field-people {
   width: 110px;
+  padding: 14px 0;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.field-search {
+  position: relative;
 }
 
 .quantity-button {
@@ -713,32 +728,57 @@ body {
   width: 40px;
   height: 48px;
   padding: 14px 10px;
-
   background-color: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-.quantity-button::before {
+.button-minus {
+  position: absolute;
+  left: 0;
+}
+
+.button-pluse {
+  position: absolute;
+  right: 0;
+}
+
+.minus::before {
   position: absolute;
   content: "";
   width: 14px;
   height: 2px;
   transform: translate(-50%);
-  background-color: rgba(0, 0, 0, 0.30);
+  background-color: #F2F2F2;
   background-image: url("../images/minus.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.quantity-button::after {
+.pluse::after {
   position: absolute;
   content: "";
-  width: 14px;
-  height: 2px;
-  transform: translate(-50%);
-  background-color: rgba(0, 0, 0, 0.30);
-  background-image: url("../images/plus.svg");
+  width: 20px;
+  height: 20px;
+  top: 25%;
+  transform: translateX(-50%);
+  background-color: #F2F2F2;
+  background-image: url("../images/pluse.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+
+.field-input-people::-webkit-outer-spin-button,
+.field-input-people::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
 }
 
 .modal-button {
@@ -761,6 +801,70 @@ body {
 .modal-button:active {
   background-color: #68A2CA;
   opacity: 0.3;
+}
+
+.tooltip {
+  position: absolute;
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  opacity: 0.6;
+}
+
+.tooltip-text {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+  display: block;
+  width: 256px;
+  padding: 16px 20px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog {
@@ -790,6 +894,7 @@ body {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
@@ -811,31 +916,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 15px;
   background-image: url("../images/breadcrumbs-home.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
-.breadcrumbs-link:not(:last-child) {
-  margin-right: 18px;
+.breadcrumbs-link::before .catalog-container {
+  margin: 0 auto;
 }
 
 .breadcrumbs-link::before {
   position: absolute;
-  right: -10px;
-  bottom: 0;
   width: 6px;
   height: 10px;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
   background-image: url("../images/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
-}
-
-.catalog-container {
-  margin: 0 auto;
 }
 
 .catalog-filter {
@@ -899,14 +1002,6 @@ body {
   cursor: pointer;
 }
 
-.control-mark:hover {
-  opacity: 0.6;
-}
-
-.control-mark:active {
-  opacity: 0.3;
-}
-
 .control-input[type="checkbox"]:checked + .control-mark::after {
   content: "";
   position: absolute;
@@ -917,16 +1012,24 @@ body {
   background-position: center;
 }
 
-.control-label {
-  cursor: pointer;
-}
-
-.control-label:hover {
+.control:hover .control-mark {
   opacity: 0.6;
 }
 
-.control-label:active {
+.control:hover .control-label {
+  opacity: 0.6;
+}
+
+.control-input[type="checkbox"]:active ~ .control-mark {
   opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:active ~ .control-label {
+  opacity: 0.3;
+}
+
+.control-label {
+  cursor: pointer;
 }
 
 .control-circle {
@@ -940,14 +1043,6 @@ body {
   cursor: pointer;
 }
 
-.control-circle:hover {
-  opacity: 0.6;
-}
-
-.control-circle:active {
-  opacity: 0.3;
-}
-
 .control-input[type="radio"]:checked + .control-circle::after {
   content: "";
   position: absolute;
@@ -958,6 +1053,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.control:hover .control-circle {
+  opacity: 0.6;
+}
+
+.control:hover .control-label {
+  opacity: 0.6;
+}
+
+.control-input[type="radio"]:active ~ .control-circle {
+  opacity: 0.3;
+}
+
+.control-input[type="radio"]:active ~ .control-label {
+  opacity: 0.3;
 }
 
 .catalog-price {
@@ -976,7 +1087,6 @@ body {
   box-sizing: border-box;
   width: 143px;
   padding: 12px 20px;
-  margin-bottom: 44px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -985,6 +1095,11 @@ body {
   border-radius: 4px 0 0 4px;
   background-color: #F2F2F2;
   border: none;
+}
+
+.catalog-input:hover,
+.catalog-input:active {
+  background-color: #E6E6E6;
 }
 
 .catalog-input-reverse {
@@ -1000,11 +1115,13 @@ body {
 .catalog-price-min,
 .catalog-price-max {
   position: relative;
+  margin-bottom: 44px;
 }
 
 .catalog-price-min span,
 .catalog-price-max span {
-  color: #6C9E42;
+  color: #000000;
+  opacity: 0.3;
   font-size: 18px;
   line-height: 24px;
   position: absolute;
@@ -1016,13 +1133,14 @@ body {
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.3)
 }
 
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: #6C9E42;
+  background-color: #FFFFFF;
+  width: 226px;
 }
 
 .range-toggle {
@@ -1042,7 +1160,6 @@ body {
 
 .toggle-min {
   top: -8px;
-  left: -226px;
 }
 
 .toggle-max {
