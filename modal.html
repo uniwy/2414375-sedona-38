@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body>
+    <div class="modal-container modal-container-close" data-test="modal">
+      <div class="modal modal-auth" data-test="modal">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group">
+              <label class="search-options" for="date-from">Дата заезда:</label>
+              <input class="field-input field-date-from" type="text" id="date-from" name="date-from"
+                placeholder="Укажите дату" value="27 апреля 2020">
+              <span class="notes notes-red">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="field-group">
+              <label class="search-options" for="date-to">Дата выезда:</label>
+              <input class="field-input field-date-to" type="text" id="date-to" name="date-to"
+                placeholder="Укажите дату" value="1 сентября 2023">
+              <span class="notes">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+
+            <div class="modal-field-group">
+              <div class="field-group field-group-adult">
+                <label class="search-options" for="adult-quantity">Взрослые:</label>
+                <div class="field-search">
+                  <button class="quantity-button minus button-minuse" type="button"></button>
+                  <input class="field-input-people field-people" type="number" id="adult-quantity" name="adult-quantity"
+                    value="2">
+                  <button class="quantity-button pluse button-pluse" type="button"></button>
+                </div>
+              </div>
+              <div class="field-group field-group-children">
+                <span class="form-label form-label-icon">
+                  <label class="search-options" for="children-quantity">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                      <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"
+                        viewBox="0 0 26 26">
+                        <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                        <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
+                      которые
+                      будут с вами, возраст
+                      которых от 6 до
+                      18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <div class="field-search">
+                  <button class="quantity-button minus button-minus" type="button"></button>
+                  <input class="field-input-people field-people" type="number" id="children-quantity"
+                    name="children-quantity" value="2">
+                  <button class="quantity-button pluse button-pluse" type="button"></button>
+                </div>
+              </div>
+            </div>
+            <button class="modal-button button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+
+</html>
