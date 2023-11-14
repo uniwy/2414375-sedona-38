@@ -895,7 +895,7 @@ body {
 }
 
 .tooltip-text:after {
-  content: '';
+  content: "";
   background-image: url("../images/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
